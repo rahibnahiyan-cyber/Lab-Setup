@@ -48,7 +48,7 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header("Referrer-Policy", "strict-origin-when-cross-origin")
         self.send_header(
             "Content-Security-Policy",
-            "default-src 'self'; base-uri 'self'; form-action 'self'; "
+            "default-src 'none'; script-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none' "
             "frame-ancestors 'none'; object-src 'none'"
         )
         super().end_headers()
@@ -93,7 +93,12 @@ class Handler(BaseHTTPRequestHandler):
             self.wfile.write(b"""
                 <!DOCTYPE html>
                 <h1>Login Lab</h1>
+
                 <script src="https://example.invalid/test.js"></script>
+                <script src="/test.js"></script>
+                <script>
+                    console.log("INLINE SCRIPT EXECUTED");
+                </script>
                 <form method="POST" action="/login">
                     <input name="username" placeholder="Username">
                     <input name="password" type="password"
