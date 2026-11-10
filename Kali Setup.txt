@@ -29,12 +29,6 @@ code --install-extension ms-python.python
 code --install-extension mads-hartmann.bash-ide-vscode
 code --install-extension esbenp.prettier-vscode
 
-sudo apt update && sudo apt install flatpak -y
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub com.obsproject.Studio -y
-flatpak uninstall com.obsproject.Studio -y
-flatpak uninstall --unused -y
-
 sudo apt install kdenlive libreoffice s-tui intel-gpu-tools vlc htop obs-studio mintstick gnome-disk-utility torbrowser-launcher  -y
 
 
@@ -44,3 +38,9 @@ sudo apt update
 sudo apt install build-essential linux-headers-$(uname -r) dkms
 sudo apt install --reinstall virtualbox-dkms virtualbox-qt
 sudo modprobe vboxdrv
+
+sudo apt update && sudo apt install flatpak -y
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub com.obsproject.Studio -y
+flatpak uninstall com.obsproject.Studio -y
+flatpak uninstall --unused -y
