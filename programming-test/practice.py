@@ -1,4 +1,4 @@
-for port in range(1, 10):
-    if port == 6:
-        break
-    print(port)
+numbers = [10, 20, 10, 30, 10, 40]
+numbers.sort(reverse=True)
+
+print(numbers)
