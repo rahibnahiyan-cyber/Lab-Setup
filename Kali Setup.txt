@@ -29,7 +29,8 @@ code --install-extension ms-python.python
 code --install-extension mads-hartmann.bash-ide-vscode
 code --install-extension esbenp.prettier-vscode
 
-sudo apt install kdenlive libreoffice s-tui intel-gpu-tools vlc htop obs-studio mintstick gnome-disk-utility torbrowser-launcher  -y
+sudo apt install kdenlive libreoffice s-tui intel-gpu-tools vlc htop obs-studio mintstick gnome-disk-utility torbrowser-launcher ibus ibus-avro -y
+im-config -n ibus
 
 
 Run these command bellow if needed:-
